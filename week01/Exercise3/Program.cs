@@ -24,6 +24,6 @@ class Program
                 Console.WriteLine("Lower");
             }
         } while (guess != magicNumber);
-        Console.WriteLine("You guessed it!");
+        Console.WriteLine("You guessed it! ");
     }
 }

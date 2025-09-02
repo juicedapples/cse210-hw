@@ -42,7 +42,7 @@ class Program
     }
     static void DisplayResult(string name, int square)
     {
-        Console.WriteLine($"{name}, the square of your number is {square}..");
+        Console.WriteLine($"{name}, the square of your number is {square}.");
     }
 
 }
