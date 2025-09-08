@@ -41,7 +41,7 @@ class Journal
     {
         if (File.Exists(filename))
         {
-            string[] lines = File.ReadAllLines(filename);
+            string[] lines = File.ReadAllLines(filename); ;
             int index = 0;
             while (index < lines.Length)
             {
