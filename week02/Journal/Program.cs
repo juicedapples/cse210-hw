@@ -63,3 +63,4 @@ class Program
         Console.WriteLine("Thank you for using the Journal! Bye!");
     }
 }
+//completed for new term

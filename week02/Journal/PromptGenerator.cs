@@ -20,3 +20,4 @@ class PromptGenerator
         return _prompts[index];
     }
 }
+//completed for new term
