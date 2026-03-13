@@ -44,4 +44,4 @@ class Program
         }
     }
 }
-//completed for exercise2
+//completed exercise2

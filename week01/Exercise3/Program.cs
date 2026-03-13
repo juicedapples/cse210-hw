@@ -27,4 +27,4 @@ class Program
         Console.WriteLine("You guessed it! ");
     }
 }
-//completed for exercise3
+//completed exercise3
