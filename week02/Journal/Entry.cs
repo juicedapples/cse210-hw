@@ -35,4 +35,4 @@ class Entry
         return null;
     }
 }
-//completed for new term
+//completed for new term.

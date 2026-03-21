@@ -59,4 +59,4 @@ class Journal
         }
     }
 }
-//Completed for new term
+//Completed for new term.
