@@ -3,9 +3,9 @@ class Word
     private string _text;
     private bool _isHidden;
 
-    public Word(string text)
+    public Word(string value)
     {
-        _text = text;
+        _text = value;
         _isHidden = false;
     }
 
@@ -28,11 +28,16 @@ class Word
     {
         if (_isHidden)
         {
-            return new string('_', _text.Length);
+            string hiddenVersion = "";
+
+            for (int i = 0; i < _text.Length; i++)
+            {
+                hiddenVersion += "_";
+            }
+
+            return hiddenVersion;
         }
-        else
-        {
-            return _text;
-        }
+
+        return _text;
     }
 }
