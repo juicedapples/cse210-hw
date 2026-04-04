@@ -14,9 +14,9 @@ class Program
             var comm4 = new Comment("Lola", "Hmmm I need a follow-up video because I got lost.");
 
             // Creating Video instances
-            var vid1 = new Video("How to Draw a Cat", "CatLovers", 300);
-            var vid2 = new Video("How to Draw a Penguin", "Drawing with Clark", 400);
-            var vid3 = new Video("What is the best Drawing tools?", "Art and Beyond", 450);
+            var vid1 = new Video("How to Draw a Cat", "CatLovers", 450);
+            var vid2 = new Video("How to Draw a Penguin", "Drawing with Clark", 150);
+            var vid3 = new Video("What is the best Drawing tools?", "Art and Beyond", 653);
 
             vid1.AddVideoComment(comm1);
             vid1.AddVideoComment(comm2);
