@@ -9,29 +9,30 @@ namespace ProductOrderSystem
         {
             try
             {
-                LocationDetails address1 = new LocationDetails("1234 Main Street", "Orem", "UT", "USA");
-                LocationDetails address2 = new LocationDetails("1010 Willow Creek", "Toronto", "ON", "Canada");
+                Address address1 = new Address("1234 Main Street", "Orem", "UT", "USA");
+                Address address2 = new Address("1010 Willow Creek Drive", "Toronto", "ON", "Canada");
 
-                Client client1 = new Client("Camille Stephens", address1);
-                Client client2 = new Client("Kyle Mortinson", address2);
+                Customer customer1 = new Customer("Camille Stephens", address1);
+                Customer customer2 = new Customer("Heather Harrison", address2);
 
-                ProductInfo product1 = new ProductInfo("Laptop", 101, 999.99, 1);
-                ProductInfo product2 = new ProductInfo("Headset", 102, 49.99, 2);
-                ProductInfo product3 = new ProductInfo("Keyboard", 103, 79.99, 1);
+                Product product1 = new Product("Phone", 001, 599.99, 1);
+                Product product2 = new Product("Bluetooth speaker", 002, 39.99, 2);
+                Product product3 = new Product("Mouse and Keyboard Combo", 003, 19.99, 1);
 
-                List<ProductInfo> orderList1 = new List<ProductInfo> { product1, product2 };
-                PurchaseOrder order1 = new PurchaseOrder(1, client1, orderList1);
+                List<Product> orderList1 = new List<Product> { product1, product2 };
+                PurchaseOrder order1 = new PurchaseOrder(1, customer1, orderList1);
 
-                List<ProductInfo> orderList2 = new List<ProductInfo> { product2, product3 };
-                PurchaseOrder order2 = new PurchaseOrder(2, client2, orderList2);
+                List<Product> orderList2 = new List<Product> { product2, product3 };
+                PurchaseOrder order2 = new PurchaseOrder(2, customer2, orderList2);
 
                 DisplayOrderDetails(order1);
+
 
                 DisplayOrderDetails(order2);
             }
             catch (Exception ex)
             {
-                // Creative add on Handle errors
+                // Creative add-on error handeling
                 ErrorHandling.LogException(ex);
                 ErrorHandling.DisplayGenericError();
             }
@@ -39,10 +40,10 @@ namespace ProductOrderSystem
 
         static void DisplayOrderDetails(PurchaseOrder order)
         {
-            Console.WriteLine($"Order Number: {order.OrderNumber}");
-            Console.WriteLine(order.GeneratePackingLabel());
-            Console.WriteLine(order.GenerateShippingLabel());
-            Console.WriteLine($"Total Price: ${order.ComputeTotalCost():0.00}\n");
+            Console.WriteLine($"Order ID: {order.OrderId}");
+            Console.WriteLine(order.PackingLabel());
+            Console.WriteLine(order.ShippingLabel());
+            Console.WriteLine($"Total Price: ${order.TotalPrice():0.00}\n");
         }
     }
 }
