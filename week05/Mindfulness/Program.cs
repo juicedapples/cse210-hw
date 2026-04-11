@@ -4,6 +4,40 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello World! This is the Mindfulness Project.");
+        while (true)
+        {
+            try
+            {
+                Console.WriteLine("\nMenu Options:");
+                Console.WriteLine("1. Start breathing activity");
+                Console.WriteLine("2. Start reflecting activity");
+                Console.WriteLine("3. Start listing activity");
+                Console.WriteLine("4. Quit");
+
+                Console.Write("\nSelect a choice from the menu: ");
+                string choice = Console.ReadLine();
+
+                if (choice == "1")
+                    new BreathingActivity().Run();
+                else if (choice == "2")
+                    new ReflectingActivity().Run();
+                else if (choice == "3")
+                    new ListingActivity().Run();
+                else if (choice == "4")
+                {
+                    Console.WriteLine("Goodbye!");
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Invalid option.");
+                }
+            }
+            // creative add in: catch all error handler
+            catch (Exception ex)
+            {
+                ErrorHandler.Handle(ex);
+            }
+        }
     }
 }
