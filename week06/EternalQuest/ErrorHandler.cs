@@ -11,17 +11,8 @@ public static class ErrorHandler
         }
         catch (Exception ex)
         {
-            Handle(ex);
+            Console.WriteLine("\nAn unexpected error occurred.");
+            Console.WriteLine($"Details: {ex.Message}");
         }
-    }
-
-    private static void Handle(Exception ex)
-    {
-        Console.WriteLine("\nAn unexpected error occurred.");
-        Console.WriteLine($"Details: {ex.Message}");
-        Console.WriteLine("The program will continue safely.\n");
-
-        Console.WriteLine("Press Enter to continue...");
-        Console.ReadLine();
     }
 }

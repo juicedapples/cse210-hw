@@ -4,7 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        //creative add on error handler
+        //creative add in error handler
         ErrorHandler.SafeExecute(() =>
         {
             GoalManager manager = new GoalManager();
