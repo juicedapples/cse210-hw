@@ -2,7 +2,7 @@ using System;
 
 public class Running : Activity
 {
-    private double _distance;
+    private double _distance; // km
 
     public Running(string date, int minutes, double distance)
         : base(date, minutes)
